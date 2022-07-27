@@ -1,5 +1,5 @@
 import Project from "../models/projectSchema.js"
-import mongoose from "mongoose"
+// import mongoose from "mongoose"
 
 
 // GET / Finds ALL project data and sorts it in order of most recent list.
@@ -10,16 +10,16 @@ export const getProjectData = async (req, res) => {
 
 
 // POST / Creates a new item document in the database with required "key:value" pairs (i.e. username, item).
-export const createShoppingListItem = async (req, res) => {
+export const createProjectData = async (req, res) => {
   const {name, description, image, gitlink, sitelink} = req.body
   let emptyFields = []
   // IF statement to catch an empty item string - to avoid null data in the database.
-  if (!item) {
-      emptyFields.push('item')
-  } 
-  if (emptyFields.length > 0) {
-      return res.status(404).json({error: 'please correct data'})
-  }
+  // if (!item) {
+  //     emptyFields.push('item')
+  // } 
+  // if (emptyFields.length > 0) {
+  //     return res.status(404).json({error: 'please correct data'})
+  // }
   //add doc to DB
   try{
       const projectData= await Project.create({name, description, image, gitlink, sitelink})

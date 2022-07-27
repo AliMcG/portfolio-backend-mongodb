@@ -1,13 +1,15 @@
-import express from "express"
+import express, { json } from "express"
 import cors from "cors"
 import logger from "morgan"
 import mongoose from "mongoose"
+import projectDataRouter from "./routes/projectDataRouter.js"
 const PORT = process.env.PORT
 const server = express()
 
 
 server.use(cors())
 server.use(logger("dev"))
+server.use(express.json())
 
 server.use("/api/v1", projectDataRouter)
 
