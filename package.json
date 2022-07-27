@@ -2,10 +2,9 @@
   "name": "portfolio-backend-mongodb",
   "version": "1.0.0",
   "description": "backend to handle project data request to front end portfolio",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r dotenv/config server.js",
     "start": "nodemon -r dotenv/config server.js"
   },
