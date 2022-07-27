@@ -3,7 +3,7 @@ import cors from "cors"
 import logger from "morgan"
 import mongoose from "mongoose"
 import projectDataRouter from "./routes/projectDataRouter.js"
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 const server = express()
 
 
