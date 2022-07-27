@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-backend-mongodb",
+  "version": "1.0.0",
+  "description": "backend to handle project data request to front end portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliMcG/portfolio-backend-mongodb.git"
+  },
+  "author": "AliMcG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliMcG/portfolio-backend-mongodb/issues"
+  },
+  "homepage": "https://github.com/AliMcG/portfolio-backend-mongodb#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
