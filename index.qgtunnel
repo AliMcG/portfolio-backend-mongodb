@@ -1,0 +1,6 @@
+
+[qgtunnel.project-data]
+accept = "127.0.0.1:27017"
+connect = "fathomless-refuge-10909.herokuapp.com:27017"
+encrypted = false
+transparent = true
