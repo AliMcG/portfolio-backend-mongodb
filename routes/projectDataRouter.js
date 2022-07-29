@@ -10,8 +10,5 @@ router.get("/project-data", getProjectData)
 
 router.post("/project-data", createProjectData)
 
-router.delete("/", (req, res) => {
-  res.json("Nothing to delete")
-})
 
 export default router
