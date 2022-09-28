@@ -3,6 +3,7 @@ import cors from "cors"
 import logger from "morgan"
 import mongoose from "mongoose"
 import projectDataRouter from "./routes/projectDataRouter.js"
+import keeperRouter from "./routes/keeperRouter.js"
 const PORT = process.env.PORT || 5000
 const server = express()
 
@@ -12,6 +13,9 @@ server.use(logger("dev"))
 server.use(express.json())
 
 server.use("/api/v1", projectDataRouter)
+
+server.use("/keep/api", keeperRouter)
+
 
 mongoose.connect(process.env.MONG_DB)
   .then(() => {

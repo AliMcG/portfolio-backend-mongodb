@@ -12,6 +12,10 @@ const keeperSchema = new Schema({
   content: {
     type: String,
     required: true
+  },
+  completed: {
+    type: Boolean,
+    required: true
   }
   
 }, { timestamps: true} )

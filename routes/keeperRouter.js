@@ -1,5 +1,5 @@
 import express from "express";
-import { getKeeperData, createKeeperData, updateKeeperData, deleteKeeperData } from "../controllers/keeperDataController"
+import { getKeeperData, createKeeperData, deleteKeeperData } from "../controllers/keeperDataController.js"
 
 const router = express.Router()
 
@@ -10,9 +10,9 @@ router.get("/keeper-app", getKeeperData)
 
 router.post("/keeper-app", createKeeperData)
 
-router.patch("/keeper-app", updateKeeperData)
+// router.patch("/keeper-app", updateKeeperData)
 
-ter.delete("/keeper-app", deleteKeeperData)
+router.delete("/keeper-app", deleteKeeperData)
 
 // router.delete("/", (req, res) => {
 //   res.json("Nothing to delete")
