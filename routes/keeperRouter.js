@@ -1,5 +1,5 @@
 import express from "express";
-import { getKeeperData, createKeeperData, deleteKeeperData } from "../controllers/keeperDataController.js"
+import { getKeeperData, createKeeperData, deleteKeeperData, updateKeeperData } from "../controllers/keeperDataController.js"
 
 const router = express.Router()
 
@@ -10,7 +10,7 @@ router.get("/keeper-app", getKeeperData)
 
 router.post("/keeper-app", createKeeperData)
 
-// router.patch("/keeper-app", updateKeeperData)
+router.patch("/keeper-app", updateKeeperData)
 
 router.delete("/keeper-app", deleteKeeperData)
 
