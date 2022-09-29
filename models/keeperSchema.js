@@ -7,11 +7,11 @@ const Schema = mongoose.Schema
 const keeperSchema = new Schema({
   title: {
     type: String,
-    required: true
+    
   },
   content: {
     type: String,
-    required: true
+    
   },
   completed: {
     type: String
