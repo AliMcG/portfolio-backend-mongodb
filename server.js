@@ -7,9 +7,9 @@ import keeperRouter from "./routes/keeperRouter.js"
 const PORT = process.env.PORT || 5000
 const server = express()
 
-// const corsOptions ={
-//   "origin": "http://localhost:3000"
-// }
+const corsOptions ={
+  "origin": "http://localhost:3000"
+}
 
 server.use(cors())
 server.use(logger("dev"))
