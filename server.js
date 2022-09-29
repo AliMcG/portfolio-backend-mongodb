@@ -7,16 +7,17 @@ import keeperRouter from "./routes/keeperRouter.js"
 const PORT = process.env.PORT || 5000
 const server = express()
 
-const corsOptions ={
-  "origin": "http://localhost:3000"
-}
+// const corsOptions ={
+//   "origin": "http://localhost:3000"
+// }
+server.options('*', cors())
 server.use(cors())
 server.use(logger("dev"))
 server.use(express.json())
 
 server.use("/api/v1", projectDataRouter)
 
-server.use("/keep/api", cors(corsOptions), keeperRouter)
+server.use("/keep/api", keeperRouter)
 
 
 mongoose.connect(process.env.MONG_DB)
