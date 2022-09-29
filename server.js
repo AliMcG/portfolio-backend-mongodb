@@ -10,7 +10,7 @@ const server = express()
 // const corsOptions ={
 //   "origin": "http://localhost:3000"
 // }
-server.options('*', cors())
+
 server.use(cors())
 server.use(logger("dev"))
 server.use(express.json())
