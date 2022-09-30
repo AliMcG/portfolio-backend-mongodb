@@ -32,7 +32,7 @@ export const deleteKeeperData = async (req, res) => {
   const note = await Keeper.findByIdAndDelete({_id: id})
   
   if(!note) {
-      return res.status(404).json({error: 'item not found'})
+      return res.status(404).json({error: 'item not found by id number'})
   }
   return res.status(200).json(note)
 }
