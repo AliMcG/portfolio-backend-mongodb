@@ -40,9 +40,9 @@ export const deleteKeeperData = async (req, res) => {
 export const updateKeeperData = async (req, res) => {
   const {id} = req.body
   // the if statement checks to see if id is valid and if not returns error message.
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(404).json({error: 'list item not found no id'})
-  }
+  // if (!mongoose.Types.ObjectId.isValid(id)) {
+  //     return res.status(404).json({error: 'list item not found no id'})
+  // }
   const note = await Keeper.findOneAndUpdate({_id: id}, { 
       ...req.body
   }) 
