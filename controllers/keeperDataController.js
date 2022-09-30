@@ -23,13 +23,13 @@ export const createKeeperData = async (req, res) => {
 
 // DELETE / Deletes an item from the database.
 export const deleteKeeperData = async (req, res) => {
-  const {_id} = req.body
-  console.log(_id)
+  const {id} = req.body
+  console.log(id)
   // the if statement checks to see if id is valid and if not returns error message.
   // if (!mongoose.Types.ObjectId.isValid(id)) {
   //     return res.status(404).json({error: 'item not found - bad id'})
   // }
-  const note = await Keeper.findByIdAndDelete({_id: _id})
+  const note = await Keeper.findByIdAndDelete({_id: id})
   
   if(!note) {
       return res.status(404).json({error: 'item not found'})
@@ -38,12 +38,12 @@ export const deleteKeeperData = async (req, res) => {
 }
 
 export const updateKeeperData = async (req, res) => {
-  const {_id} = req.body
+  const {id} = req.body
   // the if statement checks to see if id is valid and if not returns error message.
-  if (!mongoose.Types.ObjectId.isValid(_id)) {
+  if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(404).json({error: 'list item not found no id'})
   }
-  const note = await Keeper.findOneAndUpdate({_id: _id}, { 
+  const note = await Keeper.findOneAndUpdate({_id: id}, { 
       ...req.body
   }) 
   if(!note) {
