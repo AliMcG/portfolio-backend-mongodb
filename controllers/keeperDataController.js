@@ -31,6 +31,7 @@ export const deleteKeeperData = async (req, res) => {
   // }
   const note = await Keeper.findByIdAndDelete({_id: id})
   
+  // This seesm to return both the note(status 200) and the error
   if(!note) {
       return res.status(404).json({error: 'item not found by id number'})
   }

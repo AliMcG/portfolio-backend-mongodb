@@ -15,6 +15,10 @@ const keeperSchema = new Schema({
   },
   completed: {
     type: String
+  },
+  userId: {
+    type: String,
+    required: true
   }
   
 }, { timestamps: true} )
