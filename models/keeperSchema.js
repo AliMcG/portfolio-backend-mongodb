@@ -6,19 +6,16 @@ const Schema = mongoose.Schema
 
 const keeperSchema = new Schema({
   title: {
-    type: String,
-    
+    type: String
   },
   content: {
-    type: String,
-    
+    type: String
   },
   completed: {
     type: String
   },
   userId: {
-    type: String,
-    required: true
+    type: String
   }
   
 }, { timestamps: true} )
