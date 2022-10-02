@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 // , 
 
 export const getKeeperData = async (req, res) => {
-  const data = await Keeper.find().sort({ createdAt: -1 });
+  const {id} = req.params
+  const data = await Keeper.find({sub: id}).sort({ createdAt: -1 });
   console.log(data);
   res.status(200).json(data);
 };
