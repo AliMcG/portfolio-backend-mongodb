@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // , 
 
 export const getKeeperData = async (req, res) => {
-  const id = req.body.userId
+  const id = req.params
   console.log(id)
   const data = await Keeper.find({userId: id}).sort({ createdAt: -1 });
   console.log(data);
