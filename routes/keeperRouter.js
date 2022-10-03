@@ -6,7 +6,7 @@ const router = express.Router()
 router.get("/", (req, res) => {
   res.json("Hello from the keeper app")
 })
-router.get("/keeper-app", getKeeperData)
+router.get("/keeper-app/:userId", getKeeperData)
 
 router.post("/keeper-app", createKeeperData)
 
