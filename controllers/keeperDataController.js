@@ -13,9 +13,9 @@ export const getKeeperData = async (req, res) => {
 
 // POST / Creates a new item document in the database with required "key:value" pairs (i.e. username, item).
 export const createKeeperData = async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content, userId } = req.body;
   try {
-    const data = await Keeper.create({ title, content });
+    const data = await Keeper.create({ title, content, userId });
     res.status(200).json(data);
   } catch (error) {
     res.status(404).json({ error: error.message });
