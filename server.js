@@ -14,10 +14,10 @@ server.use(cors())
 server.use(logger("dev"))
 server.use(express.json())
 
-const checkJwt = auth({
-  audience: "http://localhost:4000",
-  issuerBaseURL: process.env.ISSUER_BASE_URL
-});
+// const checkJwt = auth({
+//   audience: "http://localhost:4000",
+//   issuerBaseURL: process.env.ISSUER_BASE_URL
+// });
 
 
 
@@ -27,7 +27,8 @@ const checkJwt = auth({
 
 server.use("/api/v1", projectDataRouter)
 
-server.use("/keep/api", checkJwt, keeperRouter)
+server.use("/keep/api", keeperRouter)
+// server.use("/keep/api", checkJwt, keeperRouter)
 
 server.use("/map-api", mapRouter)
 
