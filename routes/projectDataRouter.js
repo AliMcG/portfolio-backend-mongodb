@@ -4,7 +4,7 @@ import { getProjectData, createProjectData } from "../controllers/projectDataCon
 const router = express.Router()
 
 router.get("/", (req, res) => {
-  res.json("Hello from back")
+  res.json("Hello from project")
 })
 router.get("/project-data", getProjectData)
 

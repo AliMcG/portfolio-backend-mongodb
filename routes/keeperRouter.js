@@ -14,8 +14,4 @@ router.patch("/keeper-app", updateKeeperData)
 
 router.delete("/keeper-app", deleteKeeperData)
 
-// router.delete("/", (req, res) => {
-//   res.json("Nothing to delete")
-// })
-
 export default router

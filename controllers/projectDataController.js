@@ -21,7 +21,6 @@ export const createProjectData = async (req, res) => {
   // if (emptyFields.length > 0) {
   //     return res.status(404).json({error: 'please correct data'})
   // }
-  //add doc to DB
   try{
       const projectData= await Project.create({name, description, image, gitlink, sitelink})
       res.status(200).json(projectData)
