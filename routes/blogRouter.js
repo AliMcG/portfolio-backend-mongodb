@@ -1,10 +1,10 @@
 import express from "express";
-import { getAllBlogs, createNewBlog } from "../controllers/projectDataController.js";
+import { getAllBlogs, createNewBlog } from "../controllers/blogController.js";
 
 const router = express.Router()
 
 router.get("/", (req, res) => {
-  res.json("Hello from project")
+  res.json("Hello from blogs")
 })
 router.get("/blogs-data", getAllBlogs)
 

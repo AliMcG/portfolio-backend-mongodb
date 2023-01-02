@@ -21,11 +21,6 @@ server.use(express.json())
 // });
 
 
-
-// server.use("/", (req, res, next)  => {
-//   res.json("Hello")
-// })
-
 server.use("/api/v1", projectDataRouter)
 
 server.use("/keep/api", keeperRouter)
