@@ -6,6 +6,7 @@ import { auth } from 'express-oauth2-jwt-bearer';
 import projectDataRouter from "./routes/projectDataRouter.js"
 import keeperRouter from "./routes/keeperRouter.js"
 import mapRouter from "./routes/mapRouter.js"
+import blogRouter from "./routes/blogRouter.js"
 
 const PORT = process.env.PORT || 4000
 const server = express()
@@ -31,6 +32,8 @@ server.use("/keep/api", keeperRouter)
 // server.use("/keep/api", checkJwt, keeperRouter)
 
 server.use("/map-api", mapRouter)
+
+server.use("/api/blogs", blogRouter)
 
 server.use(function(err, req, res, next){
   res.status(err.status || 500);
