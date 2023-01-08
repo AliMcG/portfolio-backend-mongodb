@@ -7,19 +7,22 @@ import projectDataRouter from "./routes/projectDataRouter.js"
 import keeperRouter from "./routes/keeperRouter.js"
 import mapRouter from "./routes/mapRouter.js"
 import blogRouter from "./routes/blogRouter.js"
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
 
 const PORT = process.env.PORT || 4000
 const server = express()
 
 server.use(cors())
 server.use(logger("dev"))
-server.use(express.json())
+
 
 // const checkJwt = auth({
 //   audience: "http://localhost:4000",
 //   issuerBaseURL: process.env.ISSUER_BASE_URL
 // });
-
+server.use(express.json({limit: '50mb'}));
+server.use(express.urlencoded({limit: '50mb'}));
 
 server.use("/api/v1", projectDataRouter)
 
